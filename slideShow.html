@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    Image Gallery - Faces of KU
+</head>
+
+<body>
+    <br>
+    <br>
+    
+    <img src=var alt="img" height="400" width="500" id="imageID">
+    <br>
+    <br>
+    <button type="submit" form="next" onclick="nextImage()">Next</button>
+    <button type="submit" form="previous" value="Validate" onclick="previousImage()">Previous</button>
+
+</body>
+
+<script>
+    index = 0;
+
+    picArray = ["Ripple-Garlinghouse-Alexander-crop.jpg", "paul_kline.jpg", "andreHackKU.jpeg", "Wiles_Chris.jpg", "dan_gailey.jpg"]
+    function nextImage()
+    {
+        index++;
+        if (index == 5)
+        {
+            index = 0;
+        }
+
+        document.getElementById("imageID").src = picArray[index];
+    }
+
+    function previousImage()
+    {
+        index--;
+        if (index == -1)
+        {
+            index = 4;
+        }
+
+        document.getElementById("imageID").src = picArray[index];
+    }
+
+</script>
+
+
+</html>
