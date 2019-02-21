@@ -6,8 +6,8 @@
 <body>
     <br>
     <br>
-    
-    <img src=var alt="img" height="400" width="500" id="imageID">
+
+    <img src="Ripple-Garlinghouse-Alexander-crop.jpg" alt="img" height="400" width="500" id="imageID">
     <br>
     <br>
     <button type="submit" form="next" onclick="nextImage()">Next</button>
@@ -16,32 +16,33 @@
 </body>
 
 <script>
-    index = 0;
-
-    picArray = ["Ripple-Garlinghouse-Alexander-crop.jpg", "paul_kline.jpg", "andreHackKU.jpeg", "Wiles_Chris.jpg", "dan_gailey.jpg"]
-    function nextImage()
-    {
-        index++;
-        if (index == 5)
+        index = 0;
+    
+        picArray = ["Ripple-Garlinghouse-Alexander-crop.jpg", "paul_kline.jpg", "andreHackKU.jpeg", "Wiles_Chris.jpg", "dan_gailey.jpg"]
+        function nextImage()
         {
-            index = 0;
+            index++;
+            if (index == 5)
+            {
+                index = 0;
+            }
+    
+            document.getElementById("imageID").src = picArray[index];
         }
-
-        document.getElementById("imageID").src = picArray[index];
-    }
-
-    function previousImage()
-    {
-        index--;
-        if (index == -1)
+    
+        function previousImage()
         {
-            index = 4;
+            index--;
+            if (index == -1)
+            {
+                index = 4;
+            }
+    
+            document.getElementById("imageID").src = picArray[index];
         }
+    
+    </script>
 
-        document.getElementById("imageID").src = picArray[index];
-    }
-
-</script>
 
 
 </html>
