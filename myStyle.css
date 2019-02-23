@@ -1,0 +1,24 @@
+p
+{
+    background-color: rgb(170, 215, 236);
+    color: rgba(158, 158, 158, 0.801);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20pt;
+}
+p.bananas
+{
+    color:red;
+}
+p.bananas.hover
+{
+    color: black; 
+}
+p:hover
+{
+    color: rgb(0, 0, 0);
+}
+
+body
+{
+    background-color: rgb(185, 181, 181);
+}
