@@ -1,7 +1,18 @@
 <!DOCTYPE html>
-
+<style id="styler">
+body{
+    background-color: teal;
+}
+head{
+    background-color: teal;
+}
+</style>
 <head>
+    <h1>
     Exercise 4: CSS Manipulation
+    </h1>
+
+   
 </head>
 
 <body>
@@ -13,16 +24,51 @@
 
     <form>
 
-        Enter Border Values:<br>
+        Enter Border Values (0-255):<br>
         Red: 
-        <input type="text" name="red" id="borderR" value="">
+        <input type="text" name="red" id="borderR" value="0">
         <br>
         Green:
-        <input type="text" name="red" id="borderG" value="">
+        <input type="text" name="red" id="borderG" value="0">
+        <br>
         Blue:
-        <input type="text" name="red" id="borderB" value="">
+        <input type="text" name="red" id="borderB" value="0"><br>
+        Width:
+        <input type="text" name="red" id="borderWidth" value="200">
+
+        <br>
+        <br>
+        Enter Background Values (0-255):<br>
+        Red:
+        <input type="text" name="red" id="bckR" value="0">
+        <br>
+        Green:
+        <input type="text" name="red" id="bckG" value="0">
+        <br>
+        Blue:
+        <input type="text" name="red" id="bckB" value="0">
 
     </form>
+
+    <button type="submit" form="changeColors" value="changeColors" onclick="visualChange()">Submit</button>
 </body>
+
+<script>
+function visualChange()
+{
+    //get info
+    let bckR = document.getElementById(bckR).value;
+    let bckG = document.getElementById(bckG).value;
+    let bckB = document.getElementById(bckB).value;
+
+
+    //get info
+    let borderR = document.getElementById(borderR).value;
+    let borderG = document.getElementById(borderG).value;
+    let borderB = document.getElementById(borderB).value;
+
+}
+
+</script>
 
 </html>
