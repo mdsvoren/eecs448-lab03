@@ -1,22 +1,12 @@
 <!DOCTYPE html>
-<style id="styler">
-body{
-    background-color: teal;
-}
-head{
-    background-color: teal;
-}
-</style>
-<head>
-    <h1>
-    Exercise 4: CSS Manipulation
-    </h1>
 
+<body id="styler">
+    <script>
+        document.getElementById("styler").style.border = "thick solid #42f462";
+
+    </script>
    
-</head>
-
-<body>
-    <p>
+    <p id="styler">
         Dummy text for a paragraph that will be modified by the user. Ajsla erkla dslakj
         werjka. Kwer wklar wlekjrwori kjawre wr klwj rlw erlkw rjweriowralkwejrovmlkroiaw kljf
         sfjlk.
@@ -26,27 +16,27 @@ head{
 
         Enter Border Values (0-255):<br>
         Red: 
-        <input type="text" name="red" id="borderR" value="0">
+        <input type="text" name="red" id="borderR" value="100">
         <br>
         Green:
-        <input type="text" name="red" id="borderG" value="0">
+        <input type="text" name="red" id="borderG" value="100">
         <br>
         Blue:
-        <input type="text" name="red" id="borderB" value="0"><br>
-        Width:
+        <input type="text" name="red" id="borderB" value="100"><br>
+        Width (0-20 recommended):
         <input type="text" name="red" id="borderWidth" value="200">
 
         <br>
         <br>
         Enter Background Values (0-255):<br>
         Red:
-        <input type="text" name="red" id="bckR" value="0">
+        <input type="text" name="red" id="bckR" value="200">
         <br>
         Green:
-        <input type="text" name="red" id="bckG" value="0">
+        <input type="text" name="red" id="bckG" value="200">
         <br>
         Blue:
-        <input type="text" name="red" id="bckB" value="0">
+        <input type="text" name="red" id="bckB" value="200">
 
     </form>
 
@@ -57,16 +47,31 @@ head{
 function visualChange()
 {
     //get info
-    let bckR = document.getElementById(bckR).value;
-    let bckG = document.getElementById(bckG).value;
-    let bckB = document.getElementById(bckB).value;
-
+    let bckR = document.getElementById("bckR").value;
+    let bckG = document.getElementById("bckG").value;
+    let bckB = document.getElementById("bckB").value;
+    //change background color
+    document.getElementById("styler").style.backgroundColor = toRGB(bckR, bckG, bckB);
 
     //get info
-    let borderR = document.getElementById(borderR).value;
-    let borderG = document.getElementById(borderG).value;
-    let borderB = document.getElementById(borderB).value;
+    let borderR = document.getElementById("borderR").value;
+    let borderG = document.getElementById("borderG").value;
+    let borderB = document.getElementById("borderB").value;
+    let borderWidth = document.getElementById("borderWidth").value;
+    document.getElementById("styler").style.borderColor = toRGB(borderR,borderG,borderB);
+    document.getElementById("styler").style.borderWidth = toBW(borderWidth);
 
+}
+
+function toBW(width)
+{
+    return width+"px";
+}
+
+function toRGB(red, green, blue)
+{
+
+    return "rgb("+red+","+green+","+blue+")";
 }
 
 </script>
